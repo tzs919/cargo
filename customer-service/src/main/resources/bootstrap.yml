@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: customerservice  #应用程序ID
+  profiles:
+    active:
+      default  #默认环境
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888   #配置服务位置
+
+hystrix.command.default.execution.timeout.enabled: false

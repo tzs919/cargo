@@ -1,0 +1,29 @@
+####################################
+#server:
+#  port: 8888
+#spring:
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#      server:
+#        git:
+#          uri: https://github.com/tzs919/config.git
+#          searchPaths: cargoservice,customerservice,zuulservice
+#          username: tzs919
+#          password: 123456
+
+
+####################################
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        native:
+          searchLocations: classpath:config/cargoservice,classpath:config/customerservice,classpath:config/zuulservice

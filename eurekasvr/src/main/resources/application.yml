@@ -1,0 +1,19 @@
+#Setting the logging levels for the service
+#logging:
+#  level:
+#    com.netflix: WARN
+#    org.springframework.web: WARN
+#    com.example: DEBUG
+
+#Default port is 8761
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false #禁止向eureka注册服务，因为它自己本身就是服务器
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
+  serviceUrl:
+    defaultZone: http://localhost:8761

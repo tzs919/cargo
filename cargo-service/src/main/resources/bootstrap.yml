@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: cargoservice  #便于配置客户端知道正在查找哪个服务，对应到目录
+  profiles:
+    active:
+      default  #默认环境
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8888   #配置服务位置
+
+#      discovery:
+#        enabled: true
+#        serviceId: configserver
+
+#feign.hystrix.enabled: false
+
+hystrix.command.default.execution.timeout.enabled: false
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled=false:
+
+#feign.hystrix.enabledult.execution.isolation.thread.timeoutInMilliseconds: 10000

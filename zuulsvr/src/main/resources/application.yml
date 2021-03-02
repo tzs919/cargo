@@ -1,0 +1,46 @@
+server:
+  port: 5555
+
+  #Setting logging levels
+logging:
+    level:
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.example: DEBUG
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    cargoservice: /cargo/**
+    customerservice: /customer/**
+
+#    cargostatic:  #使用静态URL手动映射路由
+#      path: /cargostatic/**
+#      url: http://cargoservice:8080
+
+#      serviceId: cargostatic
+
+#ribbon:
+#  eureka:
+#    enabled: false  #在Ribbon中禁用Eureka支持
+#cargostatic:  #手动指定负载均衡的服务实例
+#  ribbon:
+#    listOfServers: http://cargoservice1:8080,http://cargoservice2:8080
+
+hystrix.command.default.execution.timeout.enabled: false
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 7000
+
+#hystrix.command.cargoservice.execution.isolation.thread.timeoutInMilliseconds: 7000
+#cargoservice.ribbon.ReadTimeout: 7000
