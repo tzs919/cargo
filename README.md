@@ -1,6 +1,7 @@
 # 一个分布式系统部署运行的例子
 ## 一、docker环境部署
 + cd到docker/default子目录运行：
++ 中华人民共和国
 ####  `docker-compose up`
 + 或者要运行customerservice服务的多个实例：
 ####  `docker-compose up --scale customerservice=2`
