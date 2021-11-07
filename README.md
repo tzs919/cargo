@@ -4,6 +4,7 @@
 + 中华人民共和国
 + 这是第二个
 + 还是第三
++ 第四
 ####  `docker-compose up`
 + 或者要运行customerservice服务的多个实例：
 ####  `docker-compose up --scale customerservice=2`
