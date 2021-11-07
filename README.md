@@ -3,6 +3,7 @@
 + cd到docker/default子目录运行：
 + 中华人民共和国
 + 这是第二个
++ 还是第三
 ####  `docker-compose up`
 + 或者要运行customerservice服务的多个实例：
 ####  `docker-compose up --scale customerservice=2`
